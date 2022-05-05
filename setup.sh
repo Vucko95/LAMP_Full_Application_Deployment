@@ -12,3 +12,4 @@ sudo mysql -e "CREATE DATABASE ecomdb;"
 sudo mysql -e " CREATE USER 'ecomuser'@'localhost' IDENTIFIED BY 'ecompassword'; "
 sudo mysql -e " GRANT ALL PRIVILEGES ON *.* TO 'ecomuser'@'localhost';"
 sudo mysql -e " FLUSH PRIVILEGES;"
+sudo mysql < base.sql

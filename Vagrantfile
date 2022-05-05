@@ -5,6 +5,8 @@ Vagrant.configure("2") do |config|
       master.vm.hostname = "master.local" 
       master.vm.network "private_network", ip: "192.168.5.1"
       master.vm.provision "shell", path: "setup.sh"
+      master.vm.provision "file", source: "base.sql", destination: "/home/vagrant/base.sql"
+      master.vm.provision "shell", path: "setup.sh"
 
     end 
     
